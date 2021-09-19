@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings1">
+    <option type="languageLevel1" value="ES6" />
+    <option type="languageLevel2" value="ES7" />
+    <option type="languageLevel3" value="ES7" />
+  </component>
+  <component name="JavaScriptSettings2">
+    <option type="languageLevel1" value="ES6" />
+    <option type="languageLevel2" value="ES7" />
+    <option type="languageLevel3" value="ES7" />
+  </component>
+</project>
