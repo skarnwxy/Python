@@ -1,0 +1,105 @@
+# -*- coding: utf-8 -*-
+# 前端：面板设计布局
+# WangXiaoyao 2020.6.30
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+# 第一步：定义面板类
+class Ui_Dialog(object):
+    # 第二步：设计面板
+    def setupUi(self, Dialog):
+        # （1）：设置标题和大小
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(518, 390)
+
+        # （2）：面板布局
+        self.layoutWidget = QtWidgets.QWidget(Dialog)
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 10, 455, 334))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+
+        # （3）控件布局
+        # ①：输入文件
+        # Label
+        self.labInputFile = QtWidgets.QLabel(self.layoutWidget)
+        self.labInputFile.setObjectName("labInputFile")
+        self.gridLayout.addWidget(self.labInputFile, 0, 0, 1, 1)
+        # Edit
+        self.lineEditFile = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEditFile.setObjectName("lineEditFile")
+        self.gridLayout.addWidget(self.lineEditFile, 0, 1, 1, 1)
+        # PushButton
+        self.pushButtonFile = QtWidgets.QPushButton(self.layoutWidget)
+        self.pushButtonFile.setObjectName("pushButtonFile")
+        self.gridLayout.addWidget(self.pushButtonFile, 0, 2, 1, 1)
+
+        # ②：输入查询ID
+        # Label
+        self.labInputID = QtWidgets.QLabel(self.layoutWidget)
+        self.labInputID.setObjectName("labInputID")
+        self.gridLayout.addWidget(self.labInputID, 1, 0, 1, 1)
+        # Edit
+        self.lineEditID = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEditID.setObjectName("lineEditID")
+        self.gridLayout.addWidget(self.lineEditID, 1, 1, 1, 1)
+        # PushButton
+        self.pushButtonQuery = QtWidgets.QPushButton(self.layoutWidget)
+        self.pushButtonQuery.setObjectName("pushButtonQuery")
+        self.gridLayout.addWidget(self.pushButtonQuery, 1, 2, 1, 1)
+
+        # ③：查询结果
+        # Label
+        self.labQuery = QtWidgets.QLabel(self.layoutWidget)
+        self.labQuery.setObjectName("labQuery")
+        self.gridLayout.addWidget(self.labQuery, 2, 0, 1, 1)
+        # Edit
+        self.textEditQuery = QtWidgets.QTextEdit(self.layoutWidget)
+        self.textEditQuery.setObjectName("textEditQuery")
+        self.gridLayout.addWidget(self.textEditQuery, 2, 1, 1, 1)
+        # PushButton
+        self.checkBoxSave = QtWidgets.QCheckBox(self.layoutWidget)
+        self.checkBoxSave.setObjectName("checkBoxSave")
+        self.gridLayout.addWidget(self.checkBoxSave, 2, 2, 1, 1)
+
+        # ④：输出结果
+        # Label
+        self.labInputFolder = QtWidgets.QLabel(self.layoutWidget)
+        self.labInputFolder.setObjectName("labInputFolder")
+        self.gridLayout.addWidget(self.labInputFolder, 3, 0, 1, 1)
+        # Edit
+        self.lineEditFolder = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEditFolder.setObjectName("lineEditFolder")
+        self.gridLayout.addWidget(self.lineEditFolder, 3, 1, 1, 1)
+        # PushButton
+        self.pushButtonFolder = QtWidgets.QPushButton(self.layoutWidget)
+        self.pushButtonFolder.setObjectName("pushButtonFolder")
+        self.gridLayout.addWidget(self.pushButtonFolder, 3, 2, 1, 1)
+
+        # OK和Cancel
+        self.pushButtonOk = QtWidgets.QPushButton(Dialog)
+        self.pushButtonOk.setGeometry(QtCore.QRect(280, 350, 93, 28))
+        self.pushButtonOk.setObjectName("pushButtonOk")
+        self.pushButtonCacel = QtWidgets.QPushButton(Dialog)
+        self.pushButtonCacel.setGeometry(QtCore.QRect(390, 350, 93, 28))
+        self.pushButtonCacel.setObjectName("pushButtonCacel")
+
+        self.retranslateUi(Dialog)
+        self.pushButtonCacel.clicked.connect(Dialog.close)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    # 第三步：定义资源文件
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "查询工具"))
+        self.pushButtonFolder.setText(_translate("Dialog", "添加文件夹"))
+        self.labQuery.setText(_translate("Dialog", "查询结果："))
+        self.checkBoxSave.setText(_translate("Dialog", "保存结果"))
+        self.labInputFolder.setText(_translate("Dialog", "输出文件夹："))
+        self.labInputID.setText(_translate("Dialog", "请输入ID："))
+        self.labInputFile.setText(_translate("Dialog", "请输入文件："))
+        self.pushButtonQuery.setText(_translate("Dialog", "查询"))
+        self.pushButtonFile.setText(_translate("Dialog", "添加文件"))
+        self.pushButtonOk.setText(_translate("Dialog", "OK"))
+        self.pushButtonCacel.setText(_translate("Dialog", "Cancel"))

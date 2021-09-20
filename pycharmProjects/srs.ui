@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>751</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>711</width>
+     <height>334</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetNoConstraint</enum>
+    </property>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="lineEditID"/>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="lineEditFolder"/>
+    </item>
+    <item row="2" column="3" colspan="2">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>120</number>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>15</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>25</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>时间</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>地点</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>主体</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>客体</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>图片</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="pushButtonFolder">
+      <property name="text">
+       <string>添加文件夹</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="labQuery">
+      <property name="text">
+       <string>查询结果：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="labInputFolder">
+      <property name="text">
+       <string>输出文件夹：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labInputID">
+      <property name="text">
+       <string>请输入ID：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="labInputFile">
+      <property name="text">
+       <string>请输入文件：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="pushButtonQuery">
+      <property name="text">
+       <string>查询</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="pushButtonFile">
+      <property name="text">
+       <string>添加文件</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLineEdit" name="lineEditFile"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButtonOk">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>350</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCacel">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>350</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonCacel</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
